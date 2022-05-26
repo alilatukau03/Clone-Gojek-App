@@ -9,6 +9,27 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+const GopayFeature = props => {
+  return (
+    <View
+      style={{
+        flex: 1,
+        alignItems: 'center',
+      }}>
+      <Image source={props.img} />
+      <Text
+        style={{
+          fontSize: 13,
+          fontWeight: 'bold',
+          color: 'white',
+          marginTop: 15,
+        }}>
+        {props.title}
+      </Text>
+    </View>
+  );
+};
+
 export default function App() {
   return (
     <View style={{flex: 1}}>
@@ -33,7 +54,7 @@ export default function App() {
               }}
             />
             <Image
-              source={require('./Icon/search.png')}
+              source={require('./src/assets/Icon/search.png')}
               style={{position: 'absolute', top: 6, left: 12}}
             />
           </View>
@@ -43,7 +64,7 @@ export default function App() {
               alignItems: 'center',
               justifyContent: 'center',
             }}>
-            <Image source={require('./Icon/promo.png')} />
+            <Image source={require('./src/assets/Icon/promo.png')} />
           </View>
         </View>
         {/* gopay */}
@@ -57,7 +78,7 @@ export default function App() {
               borderTopRightRadius: 4,
               padding: 14,
             }}>
-            <Image source={require('./Icon/gopay.png')} />
+            <Image source={require('./src/assets/Icon/gopay.png')} />
             <Text style={{fontSize: 17, fontWeight: 'bold', color: 'white'}}>
               Rp 9.999.999.999.999.999,00
             </Text>
@@ -71,70 +92,22 @@ export default function App() {
               borderBottomLeftRadius: 4,
               borderBottomRightRadius: 4,
             }}>
-            <View
-              style={{
-                flex: 1,
-                alignItems: 'center',
-              }}>
-              <Image source={require('./Icon/pay.png')} />
-              <Text
-                style={{
-                  fontSize: 13,
-                  fontWeight: 'bold',
-                  color: 'white',
-                  marginTop: 15,
-                }}>
-                Pay
-              </Text>
-            </View>
-            <View
-              style={{
-                flex: 1,
-                alignItems: 'center',
-              }}>
-              <Image source={require('./Icon/nearby.png')} />
-              <Text
-                style={{
-                  fontSize: 13,
-                  fontWeight: 'bold',
-                  color: 'white',
-                  marginTop: 15,
-                }}>
-                Nearby
-              </Text>
-            </View>
-            <View
-              style={{
-                flex: 1,
-                alignItems: 'center',
-              }}>
-              <Image source={require('./Icon/topup.png')} />
-              <Text
-                style={{
-                  fontSize: 13,
-                  fontWeight: 'bold',
-                  color: 'white',
-                  marginTop: 15,
-                }}>
-                Top Up
-              </Text>
-            </View>
-            <View
-              style={{
-                flex: 1,
-                alignItems: 'center',
-              }}>
-              <Image source={require('./Icon/more.png')} />
-              <Text
-                style={{
-                  fontSize: 13,
-                  fontWeight: 'bold',
-                  color: 'white',
-                  marginTop: 15,
-                }}>
-                More
-              </Text>
-            </View>
+            <GopayFeature
+              title="Pay"
+              img={require('./src/assets/Icon/pay.png')}
+            />
+            <GopayFeature
+              title="Nearby"
+              img={require('./src/assets/Icon/nearby.png')}
+            />
+            <GopayFeature
+              title="Top Up"
+              img={require('./src/assets/Icon/topup.png')}
+            />
+            <GopayFeature
+              title="More"
+              img={require('./src/assets/Icon/more.png')}
+            />
           </View>
         </View>
         {/* feature */}
@@ -162,7 +135,7 @@ export default function App() {
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}>
-                <Image source={require('./Icon/go-ride.png')} />
+                <Image source={require('./src/assets/Icon/go-ride.png')} />
               </View>
               <Text
                 style={{
@@ -185,7 +158,7 @@ export default function App() {
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}>
-                <Image source={require('./Icon/go-car.png')} />
+                <Image source={require('./src/assets/Icon/go-car.png')} />
               </View>
               <Text
                 style={{
@@ -208,7 +181,7 @@ export default function App() {
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}>
-                <Image source={require('./Icon/go-bluebird.png')} />
+                <Image source={require('./src/assets/Icon/go-bluebird.png')} />
               </View>
               <Text
                 style={{
@@ -231,7 +204,7 @@ export default function App() {
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}>
-                <Image source={require('./Icon/go-send.png')} />
+                <Image source={require('./src/assets/Icon/go-send.png')} />
               </View>
               <Text
                 style={{
@@ -262,7 +235,7 @@ export default function App() {
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}>
-                <Image source={require('./Icon/go-deals.png')} />
+                <Image source={require('./src/assets/Icon/go-deals.png')} />
               </View>
               <Text
                 style={{
@@ -285,7 +258,7 @@ export default function App() {
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}>
-                <Image source={require('./Icon/go-pulsa.png')} />
+                <Image source={require('./src/assets/Icon/go-pulsa.png')} />
               </View>
               <Text
                 style={{
@@ -308,7 +281,7 @@ export default function App() {
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}>
-                <Image source={require('./Icon/go-food.png')} />
+                <Image source={require('./src/assets/Icon/go-food.png')} />
               </View>
               <Text
                 style={{
@@ -331,7 +304,7 @@ export default function App() {
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}>
-                <Image source={require('./Icon/go-more.png')} />
+                <Image source={require('./src/assets/Icon/go-more.png')} />
               </View>
               <Text
                 style={{
@@ -359,7 +332,7 @@ export default function App() {
           }}>
           <View style={{position: 'relative'}}>
             <Image
-              source={require('./dummy/sepak-bola.jpg')}
+              source={require('./src/assets/dummy/sepak-bola.jpg')}
               style={{height: 170, width: '100%', borderRadius: 6}}
             />
             <View
@@ -382,7 +355,7 @@ export default function App() {
                 left: 16,
               }}>
               <Image
-                source={require('./logo/white.png')}
+                source={require('./src/assets/logo/white.png')}
                 style={{
                   width: undefined,
                   height: undefined,
@@ -441,7 +414,7 @@ export default function App() {
               width: 55,
             }}>
             <Image
-              source={require('./logo/gojek.png')}
+              source={require('./src/assets/logo/gojek.png')}
               style={{
                 width: undefined,
                 height: undefined,
@@ -462,7 +435,9 @@ export default function App() {
           </Text>
           <View style={{flexDirection: 'row'}}>
             <View>
-              <Image source={require('./dummy/facebook-connect.png')} />
+              <Image
+                source={require('./src/assets/dummy/facebook-connect.png')}
+              />
             </View>
             <View style={{marginLeft: 16, flex: 1, marginBottom: 16}}>
               <Text
@@ -516,7 +491,7 @@ export default function App() {
               position: 'relative',
             }}>
             <Image
-              source={require('./dummy/food-banner.jpg')}
+              source={require('./src/assets/dummy/food-banner.jpg')}
               style={{height: 170, width: '100%', borderRadius: 6}}
             />
             <View
@@ -539,7 +514,7 @@ export default function App() {
                 left: 16,
               }}>
               <Image
-                source={require('./logo/white.png')}
+                source={require('./src/assets/logo/white.png')}
                 style={{
                   width: undefined,
                   height: undefined,
@@ -611,7 +586,7 @@ export default function App() {
               marginLeft: 16,
             }}>
             <Image
-              source={require('./logo/go-food.png')}
+              source={require('./src/assets/logo/go-food.png')}
               style={{
                 width: undefined,
                 height: undefined,
@@ -642,7 +617,7 @@ export default function App() {
             <View style={{marginRight: 16}}>
               <View style={{width: 150, height: 150, borderRadius: 4}}>
                 <Image
-                  source={require('./dummy/go-food-banka.jpg')}
+                  source={require('./src/assets/dummy/go-food-banka.jpg')}
                   style={{
                     width: undefined,
                     height: undefined,
@@ -665,7 +640,7 @@ export default function App() {
             <View style={{marginRight: 16}}>
               <View style={{width: 150, height: 150, borderRadius: 4}}>
                 <Image
-                  source={require('./dummy/go-food-gm.jpg')}
+                  source={require('./src/assets/dummy/go-food-gm.jpg')}
                   style={{
                     width: undefined,
                     height: undefined,
@@ -688,7 +663,7 @@ export default function App() {
             <View style={{marginRight: 16}}>
               <View style={{width: 150, height: 150, borderRadius: 4}}>
                 <Image
-                  source={require('./dummy/go-food-kfc.jpg')}
+                  source={require('./src/assets/dummy/go-food-kfc.jpg')}
                   style={{
                     width: undefined,
                     height: undefined,
@@ -711,7 +686,7 @@ export default function App() {
             <View style={{marginRight: 16}}>
               <View style={{width: 150, height: 150, borderRadius: 4}}>
                 <Image
-                  source={require('./dummy/go-food-orins.jpg')}
+                  source={require('./src/assets/dummy/go-food-orins.jpg')}
                   style={{
                     width: undefined,
                     height: undefined,
@@ -734,7 +709,7 @@ export default function App() {
             <View style={{marginRight: 16}}>
               <View style={{width: 150, height: 150, borderRadius: 4}}>
                 <Image
-                  source={require('./dummy/go-food-pak-boss.jpg')}
+                  source={require('./src/assets/dummy/go-food-pak-boss.jpg')}
                   style={{
                     width: undefined,
                     height: undefined,
@@ -780,7 +755,7 @@ export default function App() {
           }}>
           <Image
             style={{width: 26, height: 26}}
-            source={require('./Icon/home-active.png')}
+            source={require('./src/assets/Icon/home-active.png')}
           />
           <Text style={{fontSize: 10, color: '#43ab4a', marginTop: 4}}>
             Home
@@ -794,7 +769,7 @@ export default function App() {
           }}>
           <Image
             style={{width: 26, height: 26}}
-            source={require('./Icon/order.png')}
+            source={require('./src/assets/Icon/order.png')}
           />
           <Text style={{fontSize: 10, color: '#545454', marginTop: 4}}>
             Order
@@ -808,7 +783,7 @@ export default function App() {
           }}>
           <Image
             style={{width: 26, height: 26}}
-            source={require('./Icon/help.png')}
+            source={require('./src/assets/Icon/help.png')}
           />
           <Text style={{fontSize: 10, color: '#545454', marginTop: 4}}>
             Help
@@ -822,7 +797,7 @@ export default function App() {
           }}>
           <Image
             style={{width: 26, height: 26}}
-            source={require('./Icon/inbox.png')}
+            source={require('./src/assets/Icon/inbox.png')}
           />
           <Text style={{fontSize: 10, color: '#545454', marginTop: 4}}>
             Inbox
@@ -836,7 +811,7 @@ export default function App() {
           }}>
           <Image
             style={{width: 26, height: 26}}
-            source={require('./Icon/account.png')}
+            source={require('./src/assets/Icon/account.png')}
           />
           <Text style={{fontSize: 10, color: '#545454', marginTop: 4}}>
             Account
